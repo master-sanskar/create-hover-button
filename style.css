@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 21px;
+    font-family: gilroy;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+/* #box {
+    height: 400px;
+    width: 400px;
+    background-color: lightpink;
+    border: 4px solid black;
+} */
+
+/* element k main content k pahle ayega
+             =#=
+   before me content hamesha bna na pdhta hai bina content likhe before work nhi krega
+*/
+
+
+/* #box::before {
+    content: "FIRST";
+}
+
+#box::after{
+    content: "LAST";
+} */
+
+
+/* after & before se halke fulke "animations" bna sakte hai..  */
+
+button {
+    padding: 18px 36px;
+    background-color: rgb(45, 156, 207);
+    font-size: 24px;
+    border: none;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(45, 156, 207);
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.6s;
+
+}
+
+button:hover::before {
+    transform: scale(2.0);
+    opacity: 0;
+}
